@@ -1,0 +1,40 @@
+POST http://localhost:3002/api/users
+Content-Type: application/json
+
+{
+  "name": "Dave",
+  "email": "dave@gmail.com",
+  "password": "123456",
+  "biz": false
+}
+
+###
+POST http://localhost:3002/api/auth
+Content-Type: application/json
+
+{
+  "email": "dave@gmail.com",
+  "password": "123456"
+}
+
+### test /api/users/me with query
+
+GET http://localhost:3002/api/users/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdiNjFhN2M5MmE4Y2E1YjlhNjkzYTMiLCJpYXQiOjE2NTIyNjAxODB9.uOgQd6OT5U748II_GW7bkX6HB2UsA0DU701y0RRluOI
+
+### check biz number
+POST http://localhost:3002/api/cards
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdiNjFhN2M5MmE4Y2E1YjlhNjkzYTMiLCJpYXQiOjE2NTIyNjAxODB9.uOgQd6OT5U748II_GW7bkX6HB2UsA0DU701y0RRluOI
+Content-Type: application/json
+
+{
+  "biz_Name": "biz name 1",
+  "biz_Description": "biz description 1",
+  "biz_Address": "Big Address, Israel",
+  "biz_Phone": "0509344355"
+}
+
+
+
+
+
+
