@@ -14,3 +14,5 @@ JWT_SECRET =
 ```
 mongodb+srv://erezcal:<password>@mycluster.cbgxt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 ```
+
+### By Erez Calderon
