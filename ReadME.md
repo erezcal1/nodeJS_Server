@@ -1,8 +1,7 @@
 ## The Env should be like:
 
-EXPRESS_PORT = PORT NUMBER
-
 ```
+EXPRESS_PORT = PORT NUMBER
 MONGO_USER =
 MONGO_PASS =
 MONGO_HOST =
