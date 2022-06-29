@@ -20,4 +20,11 @@ cards_Router.post("/", auth, async (req, res) => {
   res.json(card);
 });
 
+cards_Router.get("/", auth, async (req, res) => {
+  console.log("request", req.user);
+  const cards = await Card.find({ user_id: req.user._id });
+  res.json(cards);
+});
+
+
 module.exports = cards_Router;

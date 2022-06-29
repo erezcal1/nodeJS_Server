@@ -56,6 +56,7 @@ const card_Joi_Schema = Joi.object({
     .max(11)
     .required()
     .regex(/^0[2-9][-]?\d{7,9}$|^05[0-9][-]?\d{7,9}$|^07[3,7][-]?\d{7,9}$/),
+  biz_Image: Joi.string().uri().min(12),
 });
 
 const generate_Biz_Number = async () => {

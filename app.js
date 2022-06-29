@@ -20,9 +20,6 @@ app.use(cors());
 app.use("/api/users", user_Router);
 app.use("/api/auth", auth_Router);
 app.use("/api/cards", cards_Router);
-app.get("/myapi", (req,res)=>{
-  res.json({message:"ok"});
-})
 
 const PORT = process.env.EXPRESS_PORT || 3000;
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
